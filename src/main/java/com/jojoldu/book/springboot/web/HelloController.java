@@ -19,4 +19,14 @@ public class HelloController {
         return new HelloResponseDto(name, amount);
     }
 
+    @GetMapping("/test")
+    public String test() {
+        try {
+            Thread.sleep(10000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        return "test";
+    }
 }
